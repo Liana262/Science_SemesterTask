@@ -1,0 +1,12 @@
+C:\Users\liana\Documents\GitHub\Science_SemesterTask\Science_WebSite.Services\bin\Debug\netstandard2.0\Science_WebSite.Services.deps.json
+C:\Users\liana\Documents\GitHub\Science_SemesterTask\Science_WebSite.Services\bin\Debug\netstandard2.0\Science_WebSite.Services.dll
+C:\Users\liana\Documents\GitHub\Science_SemesterTask\Science_WebSite.Services\bin\Debug\netstandard2.0\Science_WebSite.Services.pdb
+C:\Users\liana\Documents\GitHub\Science_SemesterTask\Science_WebSite.Services\bin\Debug\netstandard2.0\Science_WebSite.Models.dll
+C:\Users\liana\Documents\GitHub\Science_SemesterTask\Science_WebSite.Services\bin\Debug\netstandard2.0\Science_WebSite.Models.pdb
+C:\Users\liana\Documents\GitHub\Science_SemesterTask\Science_WebSite.Services\obj\Debug\netstandard2.0\Science_WebSite.Services.csprojAssemblyReference.cache
+C:\Users\liana\Documents\GitHub\Science_SemesterTask\Science_WebSite.Services\obj\Debug\netstandard2.0\Science_WebSite.Services.AssemblyInfoInputs.cache
+C:\Users\liana\Documents\GitHub\Science_SemesterTask\Science_WebSite.Services\obj\Debug\netstandard2.0\Science_WebSite.Services.AssemblyInfo.cs
+C:\Users\liana\Documents\GitHub\Science_SemesterTask\Science_WebSite.Services\obj\Debug\netstandard2.0\Science_WebSite.Services.csproj.CoreCompileInputs.cache
+C:\Users\liana\Documents\GitHub\Science_SemesterTask\Science_WebSite.Services\obj\Debug\netstandard2.0\Science_WebSite.Services.csproj.CopyComplete
+C:\Users\liana\Documents\GitHub\Science_SemesterTask\Science_WebSite.Services\obj\Debug\netstandard2.0\Science_WebSite.Services.dll
+C:\Users\liana\Documents\GitHub\Science_SemesterTask\Science_WebSite.Services\obj\Debug\netstandard2.0\Science_WebSite.Services.pdb
