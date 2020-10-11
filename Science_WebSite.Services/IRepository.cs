@@ -8,5 +8,9 @@ namespace Science_WebSite.Services
     public interface IRepository
     {
         IEnumerable<User> GetAllUsers();
+        IEnumerable<Article> GetAllArticles();
+
+        Article GetArticle(int id);
+        
     }
 }

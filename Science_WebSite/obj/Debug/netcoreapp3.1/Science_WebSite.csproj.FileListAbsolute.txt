@@ -99,3 +99,4 @@ C:\Users\liana\Documents\GitHub\Science_SemesterTask\Science_WebSite\bin\Debug\n
 C:\Users\liana\Documents\GitHub\Science_SemesterTask\Science_WebSite\bin\Debug\netcoreapp3.1\Science_WebSite.Models.pdb
 C:\Users\liana\Documents\GitHub\Science_SemesterTask\Science_WebSite\bin\Debug\netcoreapp3.1\Science_WebSite.Services.pdb
 C:\Users\liana\Documents\GitHub\Science_SemesterTask\Science_WebSite\obj\Debug\netcoreapp3.1\Razor\Pages\NotFound.cshtml.g.cs
+C:\Users\liana\Documents\GitHub\Science_SemesterTask\Science_WebSite\obj\Debug\netcoreapp3.1\Razor\Pages\BD_Pages\Article_Details.cshtml.g.cs

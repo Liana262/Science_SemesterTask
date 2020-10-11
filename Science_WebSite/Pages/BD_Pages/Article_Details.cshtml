@@ -1,0 +1,8 @@
+﻿@page "{id}"
+@model Science_WebSite.Pages.BD_Pages.Article_DetailsModel
+@{
+    ViewData["Title"] = "Article Details";
+}
+
+<h3 class="article-top">@Model.article.Title</h3>
+<h4 style="position:relative;">@Model.article.Description</h4>
