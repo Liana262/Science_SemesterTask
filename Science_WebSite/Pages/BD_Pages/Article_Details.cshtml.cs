@@ -11,8 +11,8 @@ namespace Science_WebSite.Pages.BD_Pages
 {
     public class Article_DetailsModel : PageModel
     {
-        private readonly IRepository _repository;
-        public Article_DetailsModel(IRepository repository)
+        private readonly IArticleRepository _repository;
+        public Article_DetailsModel(IArticleRepository repository)
         {
             _repository = repository;
         }

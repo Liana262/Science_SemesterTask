@@ -4,15 +4,22 @@
     ViewData["Title"] = "Home page";
 }
 
+<!-- home-section
+            ================================================== -->
 <section id="home-section" class="slider1">
 
+    <!--
+    #################################
+        - THEMEPUNCH BANNER -
+    #################################
+    -->
     <div class="tp-banner-container">
         <div class="tp-banner">
             <ul>
                 <!-- SLIDE  -->
                 <li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-saveperformance="on" data-title="Intro Slide">
                     <!-- MAIN IMAGE -->
-                    <img src="~/upload/slide/1.jpg" alt="slidebg1" data-lazyload="upload/slide/1.jpg" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                    <img src="upload/slide/1.jpg" alt="slidebg1" data-lazyload="upload/slide/1.jpg" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
                     <!-- LAYERS -->
                     <!-- LAYER NR. 1 -->
                     <div class="tp-caption small_text lft tp-resizeme rs-parallaxlevel-0"
@@ -26,7 +33,7 @@
                          data-splitout="none"
                          data-elementdelay="0.05"
                          data-endelementdelay="0.1"
-                         style="z-index: 7; max-width: 100%; max-height: 100%; white-space: nowrap;">
+                         style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;">
                         Чтобы заглянуть на миллионы лет назад
                     </div>
 
@@ -42,7 +49,7 @@
                          data-splitout="none"
                          data-elementdelay="0.1"
                          data-endelementdelay="0.1"
-                         style="z-index: 8; max-width: 100%; max-height: 100%; white-space: nowrap;">
+                         style="z-index: 8; max-width: auto; max-height: auto; white-space: nowrap;">
                         достаточно поднять голову
                     </div>
 
@@ -58,7 +65,7 @@
                          data-splitout="none"
                          data-elementdelay="0.1"
                          data-endelementdelay="0.1"
-                         style="z-index: 9; max-width: 100%; max-height: 100%; white-space: nowrap;">
+                         style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">
                         и посмотреть на звезды
                     </div>
                 </li>
@@ -80,21 +87,21 @@
     </div>
     <div class="portfolio-box iso-call">
         <div class="project-post ">
-            <img src="~/upload/portfolio/m1.jpg" alt="">
+            <img src="upload/portfolio/m1.jpg" alt="">
             <div class="hover-box">
-                <a class="zoom" href="~/upload/portfolio/m1.jpg"><i class="fa fa-arrows-alt"></i></a>
-                <a asp-page="/BD_Pages/Article_Details" asp-route-ID="0" class="link"><i class="fa fa-link"></i></a>  @*href="~/single-project.html"*@
+                <a class="zoom" href="upload/portfolio/m1.jpg"><i class="fa fa-arrows-alt"></i></a>
+                <a asp-page="/BD_Pages/Article_Details" asp-route-ID="0" class="link"><i class="fa fa-link"></i></a> @*href="post_1.html"*@
                 <div class="inner-hover">
-                    <h2>Планета</h2>
+                    <h2>Планеты</h2>
                     <p>Почему Уран вращается на боку?</p>
                 </div>
             </div>
         </div>
         <div class="project-post snd-size">
-            <img src="~/upload/portfolio/m2.jpg" alt="">
+            <img src="upload/portfolio/m2.jpg" alt="">
             <div class="hover-box">
-                <a class="zoom" href="~/upload/portfolio/m2.jpg"><i class="fa fa-arrows-alt"></i></a>
-                <a class="link" asp-page="/BD_Pages/Article_Details" asp-route-ID="1"><i class="fa fa-link"></i></a>
+                <a class="zoom" href="upload/portfolio/m2.jpg"><i class="fa fa-arrows-alt"></i></a>
+                <a asp-page="/BD_Pages/Article_Details" asp-route-ID="1" class="link"><i class="fa fa-link"></i></a>@*href="post_2.html"*@
                 <div class="inner-hover">
                     <h2>Звезды</h2>
                     <p>Что мы знаем о квазарах?</p>
@@ -104,8 +111,8 @@
         <div class="project-post grid-sizer">
             <img src="upload/portfolio/m3.jpg" alt="">
             <div class="hover-box">
-                <a class="zoom" href="~/upload/portfolio/m3.jpg"><i class="fa fa-arrows-alt"></i></a>
-                <a class="link" asp-page="/BD_Pages/Article_Details" asp-route-ID="2"><i class="fa fa-link"></i></a>
+                <a class="zoom" href="upload/portfolio/m3.jpg"><i class="fa fa-arrows-alt"></i></a>
+                <a asp-page="/BD_Pages/Article_Details" asp-route-ID="2" class="link"><i class="fa fa-link"></i></a> @*href="post_3.html"*@
                 <div class="inner-hover">
                     <h2>Астероиды</h2>
                     <p>Состав астероидного вещества</p>
@@ -113,10 +120,10 @@
             </div>
         </div>
         <div class="project-post ">
-            <img src="~/upload/portfolio/m4.jpg" alt="">
+            <img src="upload/portfolio/m4.jpg" alt="">
             <div class="hover-box">
-                <a class="zoom" href="~/upload/portfolio/m4.jpg"><i class="fa fa-arrows-alt"></i></a>
-                <a class="link" asp-page="/BD_Pages/Article_Details" asp-route-ID="3"><i class="fa fa-link"></i></a>
+                <a class="zoom" href="upload/portfolio/m4.jpg"><i class="fa fa-arrows-alt"></i></a>
+                <a asp-page="/BD_Pages/Article_Details" asp-route-ID="3" class="link"><i class="fa fa-link"></i></a> @*href="post_4.html"*@
                 <div class="inner-hover">
                     <h2>Вселенная</h2>
                     <p>Было ли начало у Вселенной?</p>
@@ -124,10 +131,10 @@
             </div>
         </div>
         <div class="project-post snd-size">
-            <img src="~/upload/portfolio/m5.jpg" alt="">
+            <img src="upload/portfolio/m5.jpg" alt="">
             <div class="hover-box">
-                <a class="zoom" href="~/upload/portfolio/m5.jpg"><i class="fa fa-arrows-alt"></i></a>
-                <a class="link" asp-page="/BD_Pages/Article_Details" asp-route-ID="4"><i class="fa fa-link"></i></a>
+                <a class="zoom" href="upload/portfolio/m5.jpg"><i class="fa fa-arrows-alt"></i></a>
+                <a asp-page="/BD_Pages/Article_Details" asp-route-ID="4" class="link"><i class="fa fa-link"></i></a> @*href="post_5.html"*@
                 <div class="inner-hover">
                     <h2>Черные дыры</h2>
                     <p>Что такое черная дыра?</p>
@@ -137,6 +144,7 @@
     </div>
 </section>
 <!-- End portfolio section -->
+<!-- End Container -->
 <!-- Revolution slider -->
 <script type="text/javascript">
 

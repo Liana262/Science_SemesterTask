@@ -1,0 +1,34 @@
+﻿@page
+@model Science_WebSite.Pages.LoginModel
+@{
+    ViewData["Title"] = "Log in";
+}
+
+<!-- content ================================================== -->
+<div id="content">
+    <!-- blog-section ================================================== -->
+    <section class="blog-section single2">
+
+        <div class="blog-post single-post">
+
+            <div class="container">
+                <h2 align="center">@Model.Message</h2>
+                <div class="container">
+
+                    <div class="comment-section">
+                        <form class="comment-form" method="post">
+                            <input name="login" id="login" type="text" placeholder="Логин">
+                            <input name="password" id="password" type="text" placeholder="Пароль">
+                            <input type="submit" id="submit_contact" value="Войти">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End blog section -->
+
+    <a asp-area="" asp-route-ID="2" asp-page="/User/Edit">редактироввать</a>
+</div>
+
+<!-- End content -->

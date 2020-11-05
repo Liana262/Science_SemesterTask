@@ -19,8 +19,15 @@ using Science_WebSite;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\Users\liana\Documents\GitHub\Science_SemesterTask\Science_WebSite\Pages\_ViewImports.cshtml"
+using Science_WebSite.Models;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"34a983e51716650a52a35f2dec5f61500f9c36fd", @"/Pages/NotFound.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1c8fc6e7dfb6459768c1f7804b71cddfc8916ffd", @"/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"70463eecc1408b0fd1b36eeeeb26a52095c7b424", @"/Pages/_ViewImports.cshtml")]
     public class Pages_NotFound : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-page", "/Index", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -57,7 +64,7 @@ using Science_WebSite;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n\r\n<div class=\"text-center notFound-text\">\r\n    <h1>Страница не найдена!</h1>\r\n    <h4>");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "34a983e51716650a52a35f2dec5f61500f9c36fd3525", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "34a983e51716650a52a35f2dec5f61500f9c36fd3731", async() => {
                 WriteLiteral("На главную страницу");
             }
             );

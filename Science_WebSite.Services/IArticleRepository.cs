@@ -5,12 +5,12 @@ using Science_WebSite.Models;
 
 namespace Science_WebSite.Services
 {
-    public interface IRepository
+    public interface IArticleRepository
     {
-        IEnumerable<User> GetAllUsers();
+        //IEnumerable<User> GetAllUsers();
         IEnumerable<Article> GetAllArticles();
 
         Article GetArticle(int id);
-        
+
     }
 }

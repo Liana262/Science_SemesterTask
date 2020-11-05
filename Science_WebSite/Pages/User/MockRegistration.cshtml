@@ -1,0 +1,16 @@
+﻿@page
+@model Science_WebSite.Pages.MockRegistrationModel
+@{
+    ViewData["Title"] = "MockRegistration";
+}
+
+<h2 style="margin-top:100px;">@Model.Message</h2>
+<form method="post">
+    <input name="id" id="mail" type="text" placeholder="Уникальный идентификатор">
+    <input name="name" id="mail" type="text" placeholder="Имя">
+    <input name="lastname" id="mail" type="text" placeholder="Фамилимя">
+    <input name="login" id="mail" type="text" placeholder="Логин">
+    <input name="password" id="mail" type="text" placeholder="Пароль">
+    <input name="email" id="mail" type="text" placeholder="Электронная почта">
+    <input type="submit" id="submit_contact" value="Send">
+</form>
