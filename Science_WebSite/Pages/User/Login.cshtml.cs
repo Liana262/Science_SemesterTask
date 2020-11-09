@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Science_WebSite.Models;
 using Science_WebSite.Services;
+using Microsoft.AspNetCore.Http;
 
 namespace Science_WebSite.Pages
 {
@@ -20,38 +21,53 @@ namespace Science_WebSite.Pages
         }
         public void OnGet()
         {
-            //Users = _repository.GetAllUsers();
             Message = "Вход";
         }
 
-        public void OnPost(string login, string password) //работает не так как надо
-        {
-            //Users = _repository.GetAllUsers();
-            if (login == null || password == null)
+        public void OnPost()
+        { 
+            string email = HttpContext.Request.Form["email"];
+            string password = HttpContext.Request.Form["password"];
+            var isMember = _repository.IsMember(email, password) ;
+            // _repository.IsMember(user);
+            if (isMember) 
             {
-                Message = "Введите данные!";
-            }
-            else
-            {
-                bool flag = true;
-                foreach (Models.User user in Users)
-                {
-                    if (user.Login == login && user.Password == password)
-                    {
-                        flag = false;
-                        SuccessLogIn();
-                    }
-                }
-                if (flag)
-                {
-                    Message = "Пользователь не найден!";
-                }
-            }
-        }
+                //var user = _repository.GetUser(email, password);
+                //string key = user.ID.ToString();
+                
+                //HttpContext.Session.SetString("user_id", key);
+                //SetCookie(key);
+                Message = "все супер!";
+                // return RedirectToPage("/User/PrivateAcc");
 
-        public IActionResult SuccessLogIn() // я хз че с этим делать 
+            }
+            Message = "Неверный адрес электронной почты или пароль!";
+           // return RedirectToPage("/User/Login");
+            ////Users = _repository.GetAllUsers();
+            //if (email == null || password == null)
+            //{
+            //    Message = "Введите данные!";
+            //}
+            //else
+            //{
+            //    bool flag = true;
+            //    foreach (Models.User user in Users)
+            //    {
+            //        if (user.Email == email && user.Password == password)
+            //        {
+            //            flag = false;
+            //            SuccessLogIn();
+            //        }
+            //    }
+            //    if (flag)
+            //    {
+            //        Message = "Пользователь не найден!";
+            //    }
+            //}
+        }
+        private void SetCookie(string key)
         {
-            return RedirectToPage("/PrivateAcc");
+            HttpContext.Response.Cookies.Append("key", key);
         }
     }
 }

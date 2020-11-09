@@ -108,3 +108,10 @@ C:\Users\liana\Documents\GitHub\Science_SemesterTask\Science_WebSite\obj\Debug\n
 C:\Users\liana\Documents\GitHub\Science_SemesterTask\Science_WebSite\obj\Debug\netcoreapp3.1\Razor\Pages\User\PrivateAcc.cshtml.g.cs
 C:\Users\liana\Documents\GitHub\Science_SemesterTask\Science_WebSite\bin\Debug\netcoreapp3.1\Dapper.dll
 C:\Users\liana\Documents\GitHub\Science_SemesterTask\Science_WebSite\bin\Debug\netcoreapp3.1\Npgsql.dll
+C:\Users\liana\Documents\GitHub\Science_SemesterTask\Science_WebSite\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+C:\Users\liana\Documents\GitHub\Science_SemesterTask\Science_WebSite\obj\Debug\netcoreapp3.1\Razor\Pages\Gallery.cshtml.g.cs
+C:\Users\liana\Documents\GitHub\Science_SemesterTask\Science_WebSite\obj\Debug\netcoreapp3.1\Razor\Pages\BD_Pages\Post_1.cshtml.g.cs
+C:\Users\liana\Documents\GitHub\Science_SemesterTask\Science_WebSite\obj\Debug\netcoreapp3.1\Razor\Pages\BD_Pages\Post_2.cshtml.g.cs
+C:\Users\liana\Documents\GitHub\Science_SemesterTask\Science_WebSite\obj\Debug\netcoreapp3.1\Razor\Pages\BD_Pages\Post_3.cshtml.g.cs
+C:\Users\liana\Documents\GitHub\Science_SemesterTask\Science_WebSite\obj\Debug\netcoreapp3.1\Razor\Pages\BD_Pages\Post_4.cshtml.g.cs
+C:\Users\liana\Documents\GitHub\Science_SemesterTask\Science_WebSite\obj\Debug\netcoreapp3.1\Razor\Pages\BD_Pages\Post_5.cshtml.g.cs

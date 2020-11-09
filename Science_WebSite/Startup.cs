@@ -29,19 +29,20 @@ namespace Science_WebSite
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDistributedMemoryCache();
-            //services.AddSession(options => 
-            //{
-            //    options.Cookie.Name = ".CosmosPro.Session";
-            //    options.Cookie.IsEssential = true;
-            //    options.IdleTimeout = TimeSpan.FromSeconds(300);//5 min
-            //});
+            services.AddSession(options => 
+            {
+                options.Cookie.Name = ".CosmosPro.Session";
+                options.Cookie.IsEssential = true;
+                options.IdleTimeout = TimeSpan.FromSeconds(300);//5 min
+            });
             services.AddSingleton<IArticleRepository, ArticleRepository>();
             services.AddSingleton<IUserRepository, UserRepository>();
+            services.AddSingleton<IMessageRepository, MessageRepository>();
             services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IUserRepository userRepository)
         {
 
             //app.Use(async (context, next) =>
@@ -100,9 +101,24 @@ namespace Science_WebSite
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
+            app.UseSession();
+            //app.UseHttpsRedirection();
+            app.UseStaticFiles();
+
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.Use(async (context, next) =>
+            {
+                if (context.Request.Cookies.ContainsKey("key"))
+                {
+                    var key = context.Request.Cookies["key"];
+                    var user = userRepository.GetUserByID(int.Parse(key));
+                    context.Session.SetString("user_id", key);
+                }
+                await next.Invoke();
+            });
 
             app.UseEndpoints(endpoints =>
             {

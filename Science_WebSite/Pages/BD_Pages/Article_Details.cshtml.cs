@@ -18,9 +18,9 @@ namespace Science_WebSite.Pages.BD_Pages
         }
        // public IEnumerable<Article> articles { get; set; }
         public Article article { get; private set; }
-        public IActionResult OnGet(int id)
+        public IActionResult OnGet(string title)
         {
-            article = _repository.GetArticle(id);
+            article = _repository.GetArticle(title);
 
             //обработка исключения пустой модели
             if (article == null)

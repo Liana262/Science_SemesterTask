@@ -8,11 +8,11 @@ namespace Science_WebSite.Services
 {
     public interface IUserRepository
     {
-        //IEnumerable<User> GetAllUsers();
-        ////IEnumerable<Article> GetAllArticles();
+        public IEnumerable<User> GetAllUsers();
+        public void AddUser(User user);
+        public User GetUser(string email, string password);
+        public User GetUserByID(int id);
 
-        //User GetUser(int id);
-        Task AddUser(User user);
-        Task<User> GetUser(string email, string password);
+        public bool IsMember(string email, string password);
     }
 }

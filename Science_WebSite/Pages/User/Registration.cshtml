@@ -1,5 +1,5 @@
 ﻿@page
-@model Science_WebSite.Pages.RegistrationModel
+@model Science_WebSite.Pages.RegistrationModel 
 @{
     ViewData["Title"] = "Registration";
 }
@@ -12,14 +12,14 @@
         <div class="blog-post single-post">
 
             <div class="container">
-                <h2 align="center">Регистрация</h2>
+                <h2 align="center">Регистрация@*@Model.Message и количество пользователей равно*@</h2> 
                 <div class="container">
 
                     <div class="comment-section">
-                        <form class="comment-form">
-                            <input name="login" id="login" type="text" placeholder="Логин">
+                        <form class="comment-form" method="post">
+                            <input name="name" id="name" type="text" placeholder="Имя">
+                            <input name="email" id="mail" type="text" placeholder="Электронная почта">
                             <input name="password" id="password" type="text" placeholder="Пароль">
-                            <input name="mail" id="mail" type="text" placeholder="Электронная почта">
                             <input type="submit" id="submit_contact" value="Зарегистрироваться">
                         </form>
                     </div>

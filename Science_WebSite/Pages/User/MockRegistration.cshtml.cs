@@ -19,21 +19,20 @@ namespace Science_WebSite.Pages
         {
             _repository = repository;
         }
-        Models.User newUser;
         public void OnGet()
         {
             // Users = _repository.GetAllUsers();
             //_repository.AddUser(new Models.User() { ID = 0, Name = "Slivka", LastName = "Slivochnaya", Login = "MyLogin", Password = "MyPassword", Email = "Slivka@Gmail.com" });
             //_repository.AddUser(new Models.User() { ID = 1, Name = "Mersi", LastName = "RobertProsty", Login = "login", Password = "parol", Email = "LiLPomp@Gmail.com" });
            // await _repository.GetUser("login", "parol");
-            Message = $"Юзеры добавлены в бд, достаю юзера с логином login:";
+            Message = $"Введите данные для регистрации";
         }
 
-        public void OnPost(string name, string lastname, string login, string password, string email)
+        public void OnPost(string name, string email, string password)
         {
-            _repository.AddUser(new Models.User() { Name = name, Email = email, Password = password,  });
-            var user_ = _repository.GetUser(login, password);
-            Message = $"Пользователь {user_.Id} успешно зарегистрирован!";
+            _repository.AddUser(new Models.User() { Name = name, Email = email, Password = password});
+            var user_ = _repository.GetUser(email, password);
+            Message = $"Пользователь {user_.ID} успешно зарегистрирован!";
             // Users = _repository.GetAllUsers();
             //if (email == null)
             //{

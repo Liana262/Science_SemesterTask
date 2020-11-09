@@ -11,14 +11,17 @@ namespace Science_WebSite.Models
         [Required]
         public int ID { get; set; }
         [Required]
+        [RegularExpression(@"^[A-Za-z]+$", ErrorMessage = 
+                                    "Имя пользователя должно содержать только латинские буквы")]
         [MaxLength(30)]
         public string Name { get; set; }
         [Required]
-        [RegularExpression(@"^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$", ErrorMessage = "Введите корректный адрес электронной почты!")]
+        [RegularExpression(@"^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$", 
+            ErrorMessage = "Введите корректный адрес электронной почты!")]
         [MaxLength(20)]
         public string Email { get; set; }
         [Required]
-        [StringLength(20, MinimumLength = 8,ErrorMessage = "Недопустимая длина пароля!")]
+        [StringLength(20, MinimumLength = 8,ErrorMessage = "Недопустимая длина пароля")]
         public string Password { get; set; }
     }
 }

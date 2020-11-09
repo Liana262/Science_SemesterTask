@@ -3088,10 +3088,13 @@ ul.filter li a.active {
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
 }
-.blog-post.single-post .comment-section .comment-form input[type="text"]:focus,
-.blog-post.single-post .comment-section .comment-form textarea:focus {
-  border: 1px solid #f5d76e;
-}
+
+
+    .blog-post.single-post .comment-section .comment-form input[type="text"]:focus,
+    .blog-post.single-post .comment-section .comment-form input[type="password"]:focus,
+    .blog-post.single-post .comment-section .comment-form textarea:focus {
+        border: 1px solid #f5d76e;
+    }
 .blog-post.single-post .comment-section .comment-form textarea {
   min-height: 125px;
   margin-bottom: 40px;

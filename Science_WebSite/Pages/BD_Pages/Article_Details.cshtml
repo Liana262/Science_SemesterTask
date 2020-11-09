@@ -1,8 +1,36 @@
-﻿@page "{ID}"
+﻿@page "{Title}"
 @model Science_WebSite.Pages.BD_Pages.Article_DetailsModel
 @{
     ViewData["Title"] = "Article Details";
+    var photoPath = Model.article.PhotoPath;
 }
 
-<h3 class="article-top">@Model.article.Title</h3>
-<h4 style="position:relative;">@Model.article.Description</h4>
+
+<!-- content================================================== -->
+<div id="content">
+
+    <!-- single-project================================================== -->
+    <section class="single-project-section">
+        <div class="container">
+            <div class="title-project">
+                <h1>@Model.article.Title</h1>
+            </div>
+            <div class="project-gallery">
+                <img alt="" src="photoPath" />  <!--src="upload/portfolio/newsingle5.jpg"-->
+            </div>
+        </div>
+    </section>
+    <section class="single-project-section">
+        <div class="container">
+            <div class="project-content">
+                <div class="row">
+                    <h1>@Model.article.Description</h1>
+                  @*  <p class="article-text">@Model.article.ArticleText<p>*@
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- End single-project -->
+</div>
+<!-- End content -->

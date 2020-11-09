@@ -1,13 +1,11 @@
 ﻿<!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
-    <title>Cosmos.Pro</title>
-
     <meta charset="utf-8">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>@ViewData["Title"] - Science_WebSite</title>
+    <title>@ViewData["Title"] - Cosmos.Pro</title>
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -21,8 +19,9 @@
     <!-- REVOLUTION BANNER CSS SETTINGS -->
     <link rel="stylesheet" type="text/css" href="~/css/settings.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="~/css/style.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="~/css/DeleteAfterUse.css" media="screen">
 
+    <link rel="stylesheet" type="text/css" href="~/css/DeleteAfterUse.css" media="screen">
+     
 
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.migrate.js"></script>
@@ -46,52 +45,49 @@
 <body>
     <!-- Container -->
     <div id="container">
-        <header class="clearfix black-style">
-            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-                <div class="container">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" asp-area="" asp-page="/Index">Cosmos.<span>Pro</span></a>
-                    </div>
+       <header class="clearfix black-style">
+			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a asp-area="" asp-page="/Pages/Index" class="navbar-brand">Cosmos.<span>Pro</span></a>
+					</div>
 
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav navigate-section">
-                            <li class="megadrop"><a class="active" asp-area="" asp-page="/Index">Главная</a></li>
-                            <li><a asp-area="" asp-page="/Index">Галерея</a></li>
-                            <li class="megadrop">
-                                <a asp-area="" asp-page="#">Разделы</a>
-                                <div class="megadrop-down">
-                                    <div class="dropdown">
-                                        <h2>Космос</h2>
-                                        <ul>
-                                            <li><a asp-area="" asp-page="/Index">Раздел 1</a></li>
-                                            <li><a asp-area="" asp-page="/Index">Раздел 2</a></li>
-                                            <li><a asp-area="" asp-page="/Index">Раздел 3</a></li>
-                                            <li><a asp-area="" asp-page="/Index">Раздел 4</a></li>
-                                            <li><a asp-area="" asp-page="/Index">Раздел 5</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="megadrop"><a  asp-area=""  asp-page="/Chat">Обсудить</a>
-                        </ul>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav navigate-section">
+							<li class="megadrop"><a asp-area="" asp-page="/Index" class="active">Главная</a></li>
+							<li><a asp-area="" asp-page="/Gallery">Галерея</a></li>							
+							<li class="megadrop"><a href="#">Разделы</a>
+								<div class="megadrop-down">
+									<div class="dropdown">
+									    <h2>Космос</h2>
+									        <ul>
+									            <li><a asp-area="" asp-page="/BD_Pages/Post_1">Планеты</a></li>
+									            <li><a asp-area="" asp-page="/BD_Pages/Post_2">Звезды</a></li>
+									            <li><a asp-area="" asp-page="/BD_Pages/Post_3">Астероиды</a></li>
+										        <li><a asp-area="" asp-page="/BD_Pages/Post_4">Вселенная</a></li>
+										        <li><a asp-area="" asp-page="/BD_Pages/Post_5">Черные дыры</a></li>
+									        </ul>														
+									</div>
+								</div>
+							</li>
+							<li class="megadrop"><a asp-area="" asp-page="/Chat">Обсудить</a>
+						</ul>
                         <ul class="nav navbar-nav navbar-right navigate-section">
                             <li><a asp-area="" asp-page="/User/Login">Войти</a></li>
-                            <!--<li><a asp-area="" asp-page="/User/PrivateAcc">личный кабинет</a></li>--> <!--удалить после тестов-->
-                            <li><a asp-area="" asp-page="/User/MockRegistration">Зарегистрироваться</a></li>
+                            <li><a asp-area="" asp-page="/User/Registration">Зарегистрироваться</a></li>
                         </ul>
-                    </div><!-- /.navbar-collapse -->
-                </div><!-- /.container-fluid -->
-            </nav>
-
-        </header>
+					</div><!-- /.navbar-collapse -->
+				</div><!-- /.container-fluid -->
+			</nav>
+		</header>
 
     </div>
 

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Science_WebSite.Models;
 using Science_WebSite.Services;
+using Microsoft.AspNetCore.Http;
 
 namespace Science_WebSite.Pages
 {
@@ -13,49 +14,37 @@ namespace Science_WebSite.Pages
     {
         public string Message {get; set;}
         private readonly IUserRepository _repository;
+        public Models.User user { get; set; }
         public IEnumerable<Models.User> Users { get; set; }
         public RegistrationModel(IUserRepository repository)
         {
             _repository = repository;
         }
+
+        
         public void OnGet()
         {
-           // Users = _repository.GetAllUsers();
-            Message = "Войдите в личный кабинет";
+            Message = "Введите данные для регистрации";
         }
 
-        public void OnPost(string email, string password)
+        public IActionResult OnPost()
         {
-           // Users = _repository.GetAllUsers();
-            if (email == null || password == null)
-            {
-                Message = "Введите данные!";
-            }
-            else
-            {
-                bool okey = true;
-                bool okey_email = true;
-                foreach(Models.User user in Users)
-                {
-                    if(user.Email == email && user.Password == password) 
-                    {
-                        Message = $"Welcome {user.Name}!";
-                        okey = false;
-                    }
-                    else
-                    {
-                        if (user.Email == email && user.Password != password)
-                        {
-                            Message = "Неверный пароль!";
-                            okey_email = false;
-                        }
-                    }    
-                }
-                if (!okey) 
-                {
-                    Message = "Пользователь не найден!";
-                }
-            }
+            Users = _repository.GetAllUsers();
+            string name = HttpContext.Request.Form["name"];
+            string email = HttpContext.Request.Form["email"];
+            string password = HttpContext.Request.Form["password"];
+            _repository.AddUser(new Models.User() { Name = name, Email = email, Password = password });
+            var user = _repository.GetUser(email, password);
+            string key = user.ID.ToString();
+            HttpContext.Session.SetString("user_id", key);
+            SetCookie(key);
+           
+            return RedirectToPage("/User/PrivateAcc");
         }
+
+         private void SetCookie(string key)
+         {
+            HttpContext.Response.Cookies.Append("key", key);
+         }
     }
 }

@@ -7,10 +7,7 @@ namespace Science_WebSite.Services
 {
     public interface IArticleRepository
     {
-        //IEnumerable<User> GetAllUsers();
-        IEnumerable<Article> GetAllArticles();
-
-        Article GetArticle(int id);
-
+        public void Insert();
+        Article GetArticle(string title);
     }
 }
