@@ -24,7 +24,7 @@ namespace Science_WebSite.Pages
             Message = "Вход";
         }
 
-        public void OnPost()
+        public IActionResult OnPost()
         { 
             string email = HttpContext.Request.Form["email"];
             string password = HttpContext.Request.Form["password"];
@@ -32,38 +32,16 @@ namespace Science_WebSite.Pages
             // _repository.IsMember(user);
             if (isMember) 
             {
-                //var user = _repository.GetUser(email, password);
-                //string key = user.ID.ToString();
+                var user = _repository.GetUser(email, password);
+                string key = user.ID.ToString();
                 
-                //HttpContext.Session.SetString("user_id", key);
-                //SetCookie(key);
-                Message = "все супер!";
-                // return RedirectToPage("/User/PrivateAcc");
-
+                HttpContext.Session.SetString("user_id", key);
+                SetCookie(key);
+                return RedirectToPage("/User/PrivateAcc");
             }
-            Message = "Неверный адрес электронной почты или пароль!";
-           // return RedirectToPage("/User/Login");
-            ////Users = _repository.GetAllUsers();
-            //if (email == null || password == null)
-            //{
-            //    Message = "Введите данные!";
-            //}
-            //else
-            //{
-            //    bool flag = true;
-            //    foreach (Models.User user in Users)
-            //    {
-            //        if (user.Email == email && user.Password == password)
-            //        {
-            //            flag = false;
-            //            SuccessLogIn();
-            //        }
-            //    }
-            //    if (flag)
-            //    {
-            //        Message = "Пользователь не найден!";
-            //    }
-            //}
+            //Message = "Неверный адрес электронной почты или пароль!";
+            return RedirectToPage("/User/Login");
+                  
         }
         private void SetCookie(string key)
         {

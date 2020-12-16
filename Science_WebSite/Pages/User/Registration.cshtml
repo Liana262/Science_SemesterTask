@@ -16,10 +16,16 @@
                 <div class="container">
 
                     <div class="comment-section">
-                        <form class="comment-form" method="post">
-                            <input name="name" id="name" type="text" placeholder="Имя">
-                            <input name="email" id="mail" type="text" placeholder="Электронная почта">
-                            <input name="password" id="password" type="text" placeholder="Пароль">
+                        <form action="" class="comment-form" method="post">
+
+                            <input asp-for="@Model.user.Name" type="text" name="name" id="name" placeholder="Имя" />
+                            <span asp-validation-for="@Model.user.Name" />
+
+                            <input asp-for="@Model.user.Email" type="email" name="email" id="email" required="required" placeholder="Электронная почта" style=" margin-bottom:20px;">
+                            <span asp-validation-for="@Model.user.Email" /><br>
+
+                            <input asp-for="@Model.user.Password" name="password" id="password" required="required" type="password" placeholder="Пароль" style=" margin-bottom:20px;">
+                            <span asp-validation-for="@Model.user.Email" /><br>
                             <input type="submit" id="submit_contact" value="Зарегистрироваться">
                         </form>
                     </div>

@@ -19,9 +19,9 @@ namespace Science_WebSite.Pages.User
         }
         public void OnGet()
         {
-            //string key = HttpContext.Request.Cookies["key"];
-            //int id = int.Parse(key);
-            //user = _repository.GetUserByID(id);
+            string key = HttpContext.Request.Cookies["key"];
+            int id = int.Parse(key);
+            user = _repository.GetUserByID(id);
         }
     }
 }

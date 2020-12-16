@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "Private Account";
     //Models.User user = Model._ 
-    //string id = HttpContext.Request.Cookies["key"];
+    string id = HttpContext.Request.Cookies["key"];
 }
 @*<form method="get">@id</form>*@
 <!-- content ================================================== -->
@@ -22,9 +22,8 @@
                                     <h4>Профиль пользователя</h4>
                                     <table class="table table-th-block">
                                         <tbody>
-                                            <tr><td class="active">Имя:</td><td>Marina@*@Model.user.Name*@</td></tr>
-                                            <tr><td class="active">Email:</td><td>Marizzard@gmail.com@*@Model.user.Email*@</td></tr>
-                                           @* <tr><td class="active">Пароль:</td><td>@Model.user.Password</td></tr>*@
+                                            <tr><td class="active">Имя:</td><td>@Model.user.Name</td></tr>
+                                            <tr><td class="active">Email:</td><td>@Model.user.Email</td></tr>
                                         </tbody>
                                     </table>
                                 </div>
