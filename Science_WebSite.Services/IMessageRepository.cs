@@ -8,6 +8,6 @@ namespace Science_WebSite.Services
 {
     public interface IMessageRepository
     {
-        public void AddMessage(string message, int userId);
+        public void AddMessage(string message, int userId, int articleId);
     }
 }

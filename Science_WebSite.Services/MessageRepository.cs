@@ -9,12 +9,12 @@ namespace Science_WebSite.Services
     public class MessageRepository : IMessageRepository
     {
         private string connectionString = "User ID=postgres; Password=postgres; Server=127.0.0.1; Port=5433; Database=Science_db";
-        public void AddMessage(string message, int userId)
+        public void AddMessage(string message, int userId, int articleId)
         {
             using (var connection = new NpgsqlConnection(connectionString))
             {
                 connection.Open();
-                NpgsqlCommand command = new NpgsqlCommand($"INSERT INTO MessageData(textmessage, userid) VALUES('{message}', '{userId}')", connection);
+                NpgsqlCommand command = new NpgsqlCommand($"INSERT INTO MessageData(textmessage, userid, articleid) VALUES('{message}', '{userId}', '{articleId}')", connection);
                 command.ExecuteNonQuery();
             }
         }

@@ -15,5 +15,7 @@ namespace Science_WebSite.Models
         public string TextMessage { get; set; }
         [Required]
         public int UserId { get; set; }
+        [Required]
+        public int ArticleId { get; set; }
     }
 }
